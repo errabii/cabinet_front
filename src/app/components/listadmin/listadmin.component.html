@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>adresse</th>
+      <th>telephone</th>
+      <th>sexe</th>
+      <th>login</th>
+      <th>ndp</th>
+      
+    </thead>
+    <tbody>
+      <tr *ngFor="let admin of admins">
+        <td>{{admin.id}}</td>
+        <td>{{admin.nom}}</td>
+        <td>{{admin.prenom}}</td>
+        <td>{{admin.adresse}}</td>
+        <td>{{admin.tel}}</td>
+        <td>{{admin.sexe}}</td>
+        <td>{{admin.login}}</td>
+        <td>{{admin.mdp}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteAdmin(admin)">Delete</button>&nbsp;
+          <button class="btn btn-primary" (click)="updateAdmin(admin)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary"  (click)="newAdmin()">New</button>
+</div>
