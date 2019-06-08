@@ -1,0 +1,32 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>adresse</th>
+      <th>telephone</th>
+      <th>sexe</th>
+      <th>login</th>
+      <th>ndp</th>
+      
+    </thead>
+    <tbody>
+      <tr *ngFor="let infirmiere of infirmieres">
+        <td>{{infirmiere.id}}</td>
+        <td>{{infirmiere.nom}}</td>
+        <td>{{infirmiere.prenom}}</td>
+        <td>{{infirmiere.adresse}}</td>
+        <td>{{infirmiere.tel}}</td>
+        <td>{{infirmiere.sexe}}</td>
+        <td>{{infirmiere.login}}</td>
+        <td>{{infirmiere.mdp}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteInfirmiere(infirmiere)">Delete</button>&nbsp;
+          <button class="btn btn-primary" (click)="updateInfirmiere(infirmiere)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary"  (click)="newInfirmiere()">New</button>
+</div>
